@@ -1,0 +1,17 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "zerorpc": "^0.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}

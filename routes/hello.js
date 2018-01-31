@@ -7,10 +7,13 @@ client.connect("tcp://127.0.0.1:4242");
 router.get('/:name', (req, res, next) => {
     const name = req.params.name
     console.log(name)
-    client.invoke("bye", name, function(error, res, more) {
-        console.log(res)
-    });
-  })
+    client.invoke("bye", name, function(error, resp, more) {
+        console.log(resp)
+        !!resp && res.json(resp)
+        !!error && next(error)
+
+    })
+})
 
 
 module.exports = router
